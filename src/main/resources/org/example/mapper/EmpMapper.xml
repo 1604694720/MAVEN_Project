@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace:命名空间，对应mapper接口  映射文件与映射接口绑定的依据 -->
+<mapper namespace="org.example.mapper.EmpMapper">
+    <!--     id绑定的对应的接口方法名 resultType指的是返回值类型 -->
+    <select id="findAll" resultType="org.example.pojo.Emp">
+        <!--     parameterType: 参数类型 -->
+        select Empno,ename,job,hiredate,sal from emp;
+    </select>
+</mapper>
